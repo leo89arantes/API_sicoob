@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu lateral e tabela com gráfico de barras</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: row;
+			height: 100vh;
+			background-color: #00ff00;
+		}
+
+		.menu {
+			width: 200px;
+			background-color: #00ff00;
+			padding: 20px;
+			box-sizing: border-box;
+			color: white;
+			font-size: 1.2em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.menu a {
+			color: white;
+			text-decoration: none;
+			margin-bottom: 10px;
+		}
+
+		.table {
+			flex: 1;
+			padding: 20px;
+			box-sizing: border-box;
+			background-color: #00ff00;
+		}
+
+		.chart {
+			height: 300px;
+			background-color: white;
+			margin-top: 20px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		.chart-bar {
+			background-color: #2196f3;
+			height: 100%;
+			width: 0%;
+			transition: width 1s ease-in-out;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-weight: bold;
+		}
+
+		.chart-label {
+			margin-top: 5px;
+			font-size: 0.8em;
+			text-align: center;
+		}
+
+		/* Efeito de preenchimento da barra de progresso do gráfico */
+		.chart-bar.filled {
+			width: 75%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<a href="#">Página 1</a>
+			<a href="#">Página 2</a>
+			<a href="#">Página 3</a>
+		</div>
+		<div class="table">
+			<h1>Metas</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Meta</th>
+						<th>Progresso</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Meta 1</td>
+						<td>
+							<div class="chart">
+								<div class="chart-bar filled">75%</div>
+								<div class="chart-label">75%</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Meta 2</td>
+						<td>
+							<div class="chart">
+								<div class="chart-bar">0%</div>
+								<div class="chart-label">0%</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Meta 3</td>
+						<td>
+							<div class="chart">
+								<div class="chart-bar">0%</div>
+								<div class="chart-label">0%</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	
